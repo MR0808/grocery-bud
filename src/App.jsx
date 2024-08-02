@@ -32,12 +32,14 @@ const App = () => {
         const newItems = [...items, newItem];
         setItems(newItems);
         setLocalStorage(newItems);
+        toast.success('Item added to the list');
     };
 
     const removeItem = (id) => {
         const newItems = items.filter((item) => item.id !== id);
         setItems(newItems);
         setLocalStorage(newItems);
+        toast.success('Item removed');
     };
 
     const editItem = (id) => {
